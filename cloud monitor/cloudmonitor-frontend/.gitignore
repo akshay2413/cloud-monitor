@@ -1,0 +1,34 @@
+# Frontend
+cloud monitor/cloudmonitor-frontend/node_modules/
+cloud monitor/cloudmonitor-frontend/dist/
+cloud monitor/cloudmonitor-frontend/dist-ssr/
+cloud monitor/cloudmonitor-frontend/*.local
+
+# Backend build files
+cloud monitor/CloudMonitor.API/bin/
+cloud monitor/CloudMonitor.API/obj/
+
+# Local configuration
+cloud monitor/CloudMonitor.API/appsettings.json
+cloud monitor/CloudMonitor.API/appsettings.Development.json
+cloud monitor/CloudMonitor.API/*.csproj.user
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# IDE and OS files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.vs/
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+*.cache

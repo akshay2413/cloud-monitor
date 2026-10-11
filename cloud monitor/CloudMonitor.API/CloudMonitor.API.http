@@ -1,0 +1,44 @@
+@CloudMonitor.API_HostAddress = http://localhost:5128
+
+### Get all cloud resources
+GET {{CloudMonitor.API_HostAddress}}/api/CloudResources
+Accept: application/json
+
+###
+
+### Create a cloud resource
+POST {{CloudMonitor.API_HostAddress}}/api/CloudResources
+Content-Type: application/json
+
+{
+  "name": "AWS EC2",
+  "provider": "AWS",
+  "status": "Running",
+  "cpuUsage": 45.5,
+  "memoryUsage": 62.3
+}
+
+###
+
+### Get resource by ID
+GET {{CloudMonitor.API_HostAddress}}/api/CloudResources/2
+Accept: application/json
+
+###
+
+### Update resource
+PUT {{CloudMonitor.API_HostAddress}}/api/CloudResources/2
+Content-Type: application/json
+
+{
+  "name": "AWS EC2 Updated",
+  "provider": "AWS",
+  "status": "Running",
+  "cpuUsage": 55.2,
+  "memoryUsage": 68.4
+}
+
+###
+
+### Delete resource
+DELETE {{CloudMonitor.API_HostAddress}}/api/CloudResources/1
